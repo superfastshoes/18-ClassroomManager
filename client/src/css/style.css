@@ -1,0 +1,35 @@
+html {
+	background: url("/images/class.jpg")
+	no-repeat center center fixed; 
+ 	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+ 	opacity: 0.8;
+}
+
+.navTitle {
+	color: #2F46A2;
+	padding-left: 100px;
+	text-decoration: overline;
+	letter-spacing: 2px;
+}
+
+.navigation {
+	text-decoration: overline;
+}
+
+.navItem{
+	text-transform: uppercase;
+	color: #AF0F0F;
+}
+
+.navbar{
+	
+	border: none;
+}
+
+.dashBackground {
+	background-color: rgba(112,99,78,.25);
+}
+

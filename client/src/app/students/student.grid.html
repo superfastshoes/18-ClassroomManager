@@ -1,0 +1,17 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Student Name</th>
+			<th>Assignments</th>
+			<th><button ui-sref="students.detail">Add Student</button></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="x in studentGrid.studentList">
+			<td>{{x.firstName}} {{x.lastName}}</td>
+			<td>{{x.assignment.length}}</td>
+			<td><button class="studentBtn" ui-sref="students.detail({ studentId: x.studentId })">Edit</button></td>
+			<td><button class="studentBtn" ng-click="studentGrid.removeStudent(x)">Remove</button></td>
+		</tr>
+	</tbody>
+</table>

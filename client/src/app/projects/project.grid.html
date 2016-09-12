@@ -1,0 +1,18 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<td>Project Name</td>
+			<td>Assigned Count</td>
+			<td><button ui-sref="projects.detail">Add Project</button></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="x in projectGrid.projectList">
+			<td>{{x.name}}</td>
+			<td>{{x.assignments.length}}</td>
+			<td><button ui-sref="projects.detail({ projectId: x.projectId })">Edit</button></td>
+			<td><button ng-click="projectGrid.removeProject(x)">Remove</button></td>
+		</tr>
+	</tbody>
+</table>
+

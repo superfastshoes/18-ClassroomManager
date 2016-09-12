@@ -1,0 +1,53 @@
+<!-- Display all of that students assignments and grades -->
+<div class="panel panel-default" ng-show="projectDetail.project.projectId">
+    <div class="panel-heading">Assigned To</div>
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="assignment in projectDetail.project.assignments">
+                    <td>{{assignment.student.firstName}} {{assignment.student.lastName}}</td>
+                    <td>0%</td>
+                </tr>
+            </tbody>
+        </table>
+    <div class="form-group">
+        <label>Assign a Student</label>
+        <div class="input-group">
+            <select class="form-control" id="sel1" ng-model="projectDetail.selectedStudent" ng-options="student.firstName for student in projectDetail.students">
+                <option value=""></option>
+            </select>   
+        <span class="input-group-btn">
+            <button class="btn btn-success" ng-click="projectDetail.assignStudent()">Assign</button>
+        </span>
+        </div>
+    </div> 
+    </div>
+</div>
+
+<!-- Displey a table where the user inputs a new project -->
+<div class="panel panel-default">
+    <div class="panel-heading">Edit Project</div>
+    <div class="panel-body">
+        <form>
+            <div class="form-group">
+                <label>Name</label>
+                <input id="projectName" type="text" class="form-control" placeholder="Enter a name for this project" ng-model="projectDetail.project.name">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" placeholder="Enter a short description of the project" ng-model="projectDetail.project.description"></textarea>
+            </div>
+        </form>
+    </div>
+    <div class="panel-footer clearfix">
+    	<button class="btn btn-primary pull-right" ng-click="projectDetail.save()">
+    		Save
+    	</button>
+	</div>
+</div>
